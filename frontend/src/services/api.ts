@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 
 const api = axios.create({
-  baseURL: "https://wind-forecast-dashboard-assignment.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 export async function getWindDashboard(

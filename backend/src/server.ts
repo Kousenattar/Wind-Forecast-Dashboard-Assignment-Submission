@@ -6,12 +6,16 @@ import windRoutes from './routes/windRoutes';
 dotenv.config();
 
 const app = express();
+
+
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://your-frontend.vercel.app"
-    ]
+      "https://wind-forecast-dashboard-assignment-six.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
   })
 );
 
